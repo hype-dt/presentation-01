@@ -1,0 +1,205 @@
+/* HypeMind v0.1 — palco da apresentação
+   Os slides são desenhados em 1920x1080 e escalados para caber na viewport. */
+
+:root{
+  --dc-stage-w: 1920px;
+  --dc-stage-h: 1080px;
+  --hype-dark: #0F0F0F;
+  --hype-lime: #C5D30D;
+  --hype-paper: #F8F8F5;
+  --hype-grey: #7C7D7F;
+}
+
+*{box-sizing:border-box}
+
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--hype-dark);
+  color:var(--hype-paper);
+  font-family:Ranade,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow:hidden;
+}
+::selection{background:var(--hype-lime);color:var(--hype-dark)}
+a{color:var(--hype-dark);text-decoration:none;border-bottom:2px solid var(--hype-lime)}
+a:hover{background:var(--hype-lime);color:var(--hype-dark)}
+
+/* ---- palco ---------------------------------------------------------- */
+
+.deck{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.deck__stage{
+  position:relative;
+  width:var(--dc-stage-w);
+  height:var(--dc-stage-h);
+  flex:none;
+  transform-origin:center center;
+  box-shadow:0 40px 120px rgba(0,0,0,.55);
+}
+
+.deck__stage > section{
+  position:absolute;
+  inset:0;
+  width:var(--dc-stage-w);
+  height:var(--dc-stage-h);
+  visibility:hidden;
+  opacity:0;
+  transition:opacity .28s cubic-bezier(.2,0,0,1);
+}
+.deck__stage > section[data-active]{
+  visibility:visible;
+  opacity:1;
+}
+
+/* ---- controles ------------------------------------------------------ */
+
+.deck__bar{
+  position:fixed;
+  left:0;right:0;bottom:0;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:14px 22px;
+  background:linear-gradient(to top,rgba(15,15,15,.92),rgba(15,15,15,0));
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--hype-grey);
+  opacity:0;
+  transition:opacity .25s ease;
+  pointer-events:none;
+  z-index:10;
+}
+.deck__bar:hover,
+body[data-ui="on"] .deck__bar{opacity:1;pointer-events:auto}
+
+.deck__btn{
+  font:inherit;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  background:transparent;
+  color:var(--hype-paper);
+  border:1px solid #363636;
+  padding:8px 14px;
+  cursor:pointer;
+  transition:background .15s ease,color .15s ease,border-color .15s ease;
+}
+.deck__btn:hover{background:var(--hype-lime);color:var(--hype-dark);border-color:var(--hype-lime)}
+.deck__btn[disabled]{opacity:.35;cursor:default}
+.deck__btn[disabled]:hover{background:transparent;color:var(--hype-paper);border-color:#363636}
+
+.deck__count{font-variant-numeric:tabular-nums;color:var(--hype-paper)}
+.deck__label{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.deck__progress{
+  position:fixed;
+  left:0;top:0;
+  height:3px;
+  width:100%;
+  background:transparent;
+  z-index:11;
+}
+.deck__progress i{
+  display:block;
+  height:100%;
+  width:0;
+  background:var(--hype-lime);
+  transition:width .28s cubic-bezier(.2,0,0,1);
+}
+
+/* ---- notas do apresentador ------------------------------------------ */
+
+.deck__notes{
+  position:fixed;
+  left:0;right:0;bottom:0;
+  max-height:38vh;
+  overflow:auto;
+  padding:26px 32px 64px;
+  background:#161616;
+  border-top:3px solid var(--hype-lime);
+  color:#DBDBDB;
+  font-size:19px;
+  line-height:1.5;
+  z-index:9;
+}
+.deck__notes[hidden]{display:none}
+.deck__notes b{
+  display:block;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--hype-grey);
+  margin:0 0 10px;
+}
+
+/* ---- índice de slides ------------------------------------------------ */
+
+.deck__index{
+  position:fixed;
+  inset:0;
+  background:rgba(15,15,15,.97);
+  padding:64px;
+  overflow:auto;
+  z-index:12;
+}
+.deck__index[hidden]{display:none}
+.deck__index h2{
+  font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--hype-grey);margin:0 0 32px;
+}
+.deck__index ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;max-width:900px}
+.deck__index button{
+  width:100%;
+  display:flex;
+  gap:22px;
+  align-items:baseline;
+  font:inherit;
+  font-size:26px;
+  text-align:left;
+  background:transparent;
+  color:var(--hype-paper);
+  border:0;
+  border-bottom:1px solid #262626;
+  padding:16px 8px;
+  cursor:pointer;
+}
+.deck__index button span{
+  font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--hype-grey);min-width:88px;
+}
+.deck__index button:hover{background:var(--hype-lime);color:var(--hype-dark)}
+.deck__index button:hover span{color:var(--hype-dark)}
+.deck__index button[aria-current="true"] span{color:var(--hype-lime)}
+.deck__index button[aria-current="true"]:hover span{color:var(--hype-dark)}
+
+/* ---- botão copiar do anexo ------------------------------------------ */
+
+.copy-btn:hover{background:#0F0F0F !important;color:#C5D30D !important}
+.copy-btn:active{transform:translateY(1px)}
+
+/* ---- impressão / export --------------------------------------------- */
+
+@media print{
+  @page{size:1920px 1080px;margin:0}
+  body{overflow:visible;background:#fff}
+  .deck{position:static;display:block}
+  .deck__stage{width:1920px;height:auto;transform:none !important;box-shadow:none}
+  .deck__stage > section{
+    position:relative;
+    inset:auto;
+    visibility:visible;
+    opacity:1 !important;
+    break-after:page;
+    page-break-after:always;
+  }
+  .deck__bar,.deck__progress,.deck__notes,.deck__index{display:none !important}
+}

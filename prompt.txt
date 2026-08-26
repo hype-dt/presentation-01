@@ -1,0 +1,6 @@
+[ Substitua este arquivo pelo prompt real do pipeline. ]
+
+O slide "Anexo · prompt" carrega este arquivo em tempo de execução e o botão
+"Copiar" copia o conteúdo dele para a área de transferência. Basta sobrescrever
+prompt.txt com o texto original (as 235 linhas do prompt do pipeline) e fazer
+commit — nenhuma outra alteração é necessária.

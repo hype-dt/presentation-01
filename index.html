@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HypeMind v0.1 — Verificação automática de conformidade</title>
+<meta name="description" content="Piloto ITA-CORÁ: sessão assistida e pipeline sobre o mesmo acervo e o mesmo modelo. Quanto do projeto atende? E quanto custa descobrir?">
+<meta property="og:title" content="HypeMind v0.1 — Verificação automática de conformidade">
+<meta property="og:description" content="Piloto ITA-CORÁ: sessão assistida e pipeline sobre o mesmo acervo e o mesmo modelo.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/simbolo-branco.svg">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f%5B%5D=ranade&f%5B%5D=sentient&display=swap">
+<link rel="stylesheet" href="deck.css">
+</head>
+<body>
+
+<div class="deck" data-deck>
+  <div class="deck__stage" data-stage>
+    <section data-label="Capa" data-screen-label="Capa" data-speaker-notes="Um piloto, dois caminhos: sessão assistida e pipeline. Mesmo acervo, mesmo modelo." style="display:flex;flex-direction:column;background:#0F0F0F;color:#F8F8F5;font-family:Ranade,'Helvetica Neue',Arial,sans-serif;padding:76px 104px 60px;overflow:hidden">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0;position:relative">
+        <img src="assets/grafismo-lima.svg" alt="" style="position:absolute;right:-150px;top:110px;height:600px;opacity:.3;transform:scaleX(-1);pointer-events:none">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;position:relative">
+          <p data-a style="font-size:20px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7C7D7F;margin:0;max-width:760px;line-height:1.5">Verificação automática de conformidade · Design Guidelines Hype</p>
+          <img src="assets/logo-branco.svg" alt="Hype" data-a style="height:38px;display:block">
+        </div>
+        <h1 data-a style="font-size:196px;font-weight:400;letter-spacing:-.035em;line-height:.9;margin:56px 0 0;position:relative">HypeMind<span style="font-size:26px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#C5D30D;vertical-align:super;margin-left:20px">v0.1</span></h1>
+        <div data-rule style="height:4px;background:#C5D30D;width:220px;transform-origin:left center;margin:44px 0 0"></div>
+        <p data-a style="font-family:Sentient,Georgia,serif;font-size:52px;font-weight:400;font-style:italic;line-height:1.15;letter-spacing:-.01em;color:#DBDBDB;margin:36px 0 0;max-width:1200px;position:relative">Quanto do projeto atende? E quanto custa descobrir?</p>
+        <div data-a style="display:flex;margin-top:auto;position:relative">
+          <div style="flex:1;padding:0 28px 0 0"><p style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F;margin:0 0 12px">Piloto</p><p style="font-size:27px;font-weight:500;margin:0">ITA · CORÁ</p></div>
+          <div style="flex:1;padding:0 28px;border-left:1px solid #363636"><p style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F;margin:0 0 12px">Praça</p><p style="font-size:27px;font-weight:500;margin:0">Penha (SC)</p></div>
+          <div style="flex:1;padding:0 28px;border-left:1px solid #363636"><p style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F;margin:0 0 12px">Padrão</p><p style="font-size:27px;font-weight:500;margin:0">A · ArtHaus</p></div>
+          <div style="flex:1;padding:0 28px;border-left:1px solid #363636"><p style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F;margin:0 0 12px">Modelo</p><p style="font-size:27px;font-weight:500;margin:0">Claude Opus 5</p></div>
+          <div style="flex:1;padding:0 28px;border-left:1px solid #363636"><p style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F;margin:0 0 12px">Testes</p><p style="font-size:27px;font-weight:500;margin:0">Cowork · Pipeline</p></div>
+          <div style="flex:1;padding:0 0 0 28px;border-left:1px solid #363636"><p style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F;margin:0 0 12px">Data</p><p style="font-size:27px;font-weight:500;margin:0">ago 2026</p></div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #363636;padding-top:22px;margin-top:34px;font-size:21px;font-weight:500;color:#7C7D7F">
+        <span><b style="color:#F8F8F5;font-weight:700">Claude Cowork</b> · sessão assistida · 10 perguntas</span>
+        <span><b style="color:#F8F8F5;font-weight:700">HypeMind v0.1</b> · pipeline sobre a API · 4 perguntas</span>
+        <span>Mesmo acervo · mesmo modelo</span>
+      </div>
+    </section>
+
+    <section data-label="Metodologia · Cowork" data-screen-label="01" data-speaker-notes="O operador é parte do processo, não espectador. Norma primeiro, prancha por último." style="display:flex;flex-direction:column;background:#F8F8F5;color:#0F0F0F;font-family:Ranade,'Helvetica Neue',Arial,sans-serif;padding:76px 104px 56px;overflow:hidden">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0">
+        <p data-a style="font-size:19px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7C7D7F;margin:0">01 · Metodologia · Claude Cowork</p>
+        <h2 data-a style="font-size:62px;font-weight:400;letter-spacing:-.02em;line-height:1.06;margin:18px 0 0;text-wrap:pretty">Um operador, uma conversa,<br>o acervo aberto aos poucos</h2>
+        <div data-rule style="height:3px;background:#C5D30D;width:150px;transform-origin:left center;margin:30px 0 0"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:46px;flex:1;min-height:0">
+          <div data-a style="border:1px solid #DBDBDB;padding:28px 30px">
+            <svg viewBox="0 0 900 430" style="width:100%;height:auto;display:block;font-family:Ranade,sans-serif">
+              <defs><marker id="mk1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F0F0F"></path></marker></defs>
+              <rect x="20" y="40" width="230" height="76" fill="none" stroke="#0F0F0F" stroke-width="1.5"></rect>
+              <text x="40" y="72" style="font-size:23px;font-weight:500;fill:#0F0F0F">Operador</text>
+              <text x="40" y="98" style="font-size:18px;font-weight:500;fill:#7C7D7F">seleciona e entrega</text>
+              <rect x="20" y="176" width="230" height="76" fill="none" stroke="#0F0F0F" stroke-width="1.5"></rect>
+              <text x="40" y="208" style="font-size:23px;font-weight:500;fill:#0F0F0F">Cadernos + IFC</text>
+              <text x="40" y="234" style="font-size:18px;font-weight:500;fill:#7C7D7F">+ pranchas em lotes</text>
+              <rect x="380" y="60" width="290" height="240" fill="#0F0F0F"></rect>
+              <text x="404" y="102" style="font-size:21px;font-weight:700;letter-spacing:.1em;fill:#C5D30D">SESSÃO COWORK</text>
+              <text x="404" y="146" style="font-size:20px;font-weight:500;fill:#F8F8F5">lê norma · abre IFC</text>
+              <text x="404" y="178" style="font-size:20px;font-weight:500;fill:#F8F8F5">extrai prancha</text>
+              <text x="404" y="210" style="font-size:20px;font-weight:500;fill:#F8F8F5">decide e cita</text>
+              <line x1="404" y1="236" x2="646" y2="236" stroke="#484948" stroke-width="1"></line>
+              <text x="404" y="270" style="font-size:18px;font-weight:500;fill:#7C7D7F">contexto acumula</text>
+              <rect x="740" y="142" width="140" height="76" fill="none" stroke="#0F0F0F" stroke-width="1.5"></rect>
+              <text x="760" y="174" style="font-size:23px;font-weight:500;fill:#0F0F0F">Relatório</text>
+              <text x="760" y="200" style="font-size:18px;font-weight:500;fill:#7C7D7F">markdown</text>
+              <rect x="380" y="350" width="290" height="66" fill="none" stroke="#7C7D7F" stroke-width="1.5" stroke-dasharray="6 5"></rect>
+              <text x="404" y="380" style="font-size:22px;font-weight:500;fill:#0F0F0F">Faltou material?</text>
+              <text x="404" y="404" style="font-size:18px;font-weight:500;fill:#7C7D7F">nova rodada manual</text>
+              <path data-p d="M135,116 L135,176" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk1)"></path>
+              <path data-p d="M250,214 L315,214 L315,180 L380,180" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk1)"></path>
+              <path data-p d="M670,180 L740,180" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk1)"></path>
+              <path data-p d="M525,300 L525,350" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk1)"></path>
+              <path data-p d="M380,383 L320,383 L320,78 L250,78" fill="none" stroke="#0F0F0F" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#mk1)"></path>
+              <text data-a x="148" y="156" style="font-size:17px;font-weight:500;fill:#7C7D7F">abre</text>
+              <text data-a x="330" y="206" style="font-size:17px;font-weight:500;fill:#7C7D7F">contexto</text>
+              <text data-a x="540" y="332" style="font-size:17px;font-weight:500;fill:#7C7D7F">veredito</text>
+              <text data-a x="256" y="330" style="font-size:19px;font-weight:700;fill:#0F0F0F">3 rodadas</text>
+            </svg>
+            <p style="font-size:19px;font-weight:500;color:#7C7D7F;margin:22px 0 0;line-height:1.5">O operador é parte do processo, não espectador.</p>
+          </div>
+          <div>
+            <ul data-a style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px">
+              <li style="display:flex;gap:18px;font-size:28px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:13px"></span><span>Escopo fechado em <b style="font-weight:700">10 perguntas</b></span></li>
+              <li style="display:flex;gap:18px;font-size:28px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:13px"></span><span>Norma primeiro, depois modelo, depois prancha</span></li>
+              <li style="display:flex;gap:18px;font-size:28px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:13px"></span><span>Leitura visual só em <b style="font-weight:700">último caso</b>, declarada</span></li>
+              <li style="display:flex;gap:18px;font-size:28px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:13px"></span><span>Toda citação com <b style="font-weight:700">chunk, página e revisão</b></span></li>
+            </ul>
+            <div data-a style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border:1px solid #DBDBDB">
+              <div style="padding:24px 22px"><b data-count="10" style="display:block;font-size:52px;font-weight:700;letter-spacing:-.02em;line-height:1">10</b><span style="display:block;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:14px">Perguntas</span></div>
+              <div style="padding:24px 22px;border-left:1px solid #DBDBDB"><b data-count="3" style="display:block;font-size:52px;font-weight:700;letter-spacing:-.02em;line-height:1">3</b><span style="display:block;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:14px">Rodadas</span></div>
+              <div style="padding:24px 22px;border-left:1px solid #DBDBDB"><b data-count="268" style="display:block;font-size:52px;font-weight:700;letter-spacing:-.02em;line-height:1">268</b><span style="display:block;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:14px">Chamadas</span></div>
+              <div style="padding:24px 22px;border-left:1px solid #DBDBDB;background:#C5D30D;color:#0F0F0F"><b style="display:block;font-size:52px;font-weight:700;letter-spacing:-.02em;line-height:1">3 h</b><span style="display:block;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0F0F0F;margin-top:14px">Com operador</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #DBDBDB;padding-top:20px;margin-top:30px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F"><img src="assets/simbolo-preto.svg" alt="" style="height:22px;display:block">HypeMind v0.1 · piloto ITA-CORÁ</span>
+        <span style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F">Cowork · metodologia</span>
+      </div>
+    </section>
+
+    <section data-label="Resultados · Cowork" data-screen-label="02" data-speaker-notes="Seis não conformidades em dez perguntas. Uma ficou sem resposta: a bancada não foi exportada." style="display:flex;flex-direction:column;background:#F8F8F5;color:#0F0F0F;font-family:Ranade,'Helvetica Neue',Arial,sans-serif;padding:76px 104px 56px;overflow:hidden">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0">
+        <p data-a style="font-size:19px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7C7D7F;margin:0">02 · Resultados · Claude Cowork</p>
+        <h2 data-a style="font-size:62px;font-weight:400;letter-spacing:-.02em;line-height:1.06;margin:18px 0 0">Seis não conformidades,<br>uma pergunta sem resposta</h2>
+        <div data-rule style="height:3px;background:#C5D30D;width:150px;transform-origin:left center;margin:30px 0 0"></div>
+        <div data-a style="margin-top:44px;border:1px solid #DBDBDB;padding:34px 36px 28px">
+          <svg viewBox="0 0 1714 232" style="width:100%;height:auto;display:block;font-family:Ranade,sans-serif">
+            <defs>
+              <pattern id="hyhatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(-56.31)">
+                <rect width="12" height="12" fill="#F8F8F5"></rect><line x1="0" y1="0" x2="0" y2="12" stroke="#C5D30D" stroke-width="6"></line>
+              </pattern>
+            </defs>
+            <g data-cell><rect x="0" y="8" width="148" height="148" fill="#C5D30D"></rect><text x="16" y="52" style="font-size:30px;font-weight:700;fill:#0F0F0F">01</text><text x="74" y="196" text-anchor="middle" style="font-size:18px;font-weight:500;fill:#484948">Desnível</text></g>
+            <g data-cell><rect x="174" y="8" width="148" height="148" fill="#C5D30D"></rect><text x="190" y="52" style="font-size:30px;font-weight:700;fill:#0F0F0F">02</text><text x="248" y="196" text-anchor="middle" style="font-size:18px;font-weight:500;fill:#484948">Impermeab.</text></g>
+            <g data-cell><rect x="348" y="8" width="148" height="148" fill="none" stroke="#7C7D7F" stroke-width="1.5" stroke-dasharray="7 6"></rect><text x="364" y="52" style="font-size:30px;font-weight:700;fill:#7C7D7F">03</text><text x="422" y="196" text-anchor="middle" style="font-size:18px;font-weight:500;fill:#484948">Bancada</text></g>
+            <g data-cell><rect x="522" y="8" width="148" height="148" fill="#C5D30D"></rect><text x="538" y="52" style="font-size:30px;font-weight:700;fill:#0F0F0F">04</text><text x="596" y="196" text-anchor="middle" style="font-size:18px;font-weight:500;fill:#484948">Ralos</text></g>
+            <g data-cell><rect x="696" y="8" width="148" height="148" fill="#C5D30D"></rect><text x="712" y="52" style="font-size:30px;font-weight:700;fill:#0F0F0F">05</text><text x="770" y="196" text-anchor="middle" style="font-size:18px;font-weight:500;fill:#484948">Revestim.</text></g>
+            <g data-cell><rect x="870" y="8" width="148" height="148" fill="url(#hyhatch)" stroke="#0F0F0F" stroke-width="1.5"></rect><text x="886" y="52" style="font-size:30px;font-weight:700;fill:#0F0F0F">06</text><text x="944" y="196" text-anchor="middle" style="font-size:18px;font-weight:500;fill:#484948">Porta</text></g>
+            <g data-cell><rect x="1044" y="8" width="148" height="148" fill="url(#hyhatch)" stroke="#0F0F0F" stroke-width="1.5"></rect><text x="1060" y="52" style="font-size:30px;font-weight:700;fill:#0F0F0F">07</text><text x="1118" y="196" text-anchor="middle" style="font-size:18px;font-weight:500;fill:#484948">Pé-direito</text></g>
+            <g data-cell><rect x="1218" y="8" width="148" height="148" fill="#0F0F0F"></rect><text x="1234" y="52" style="font-size:30px;font-weight:700;fill:#C5D30D">08</text><text x="1292" y="196" text-anchor="middle" style="font-size:18px;font-weight:500;fill:#484948">Rampa</text></g>
+            <g data-cell><rect x="1392" y="8" width="148" height="148" fill="#C5D30D"></rect><text x="1408" y="52" style="font-size:30px;font-weight:700;fill:#0F0F0F">09</text><text x="1466" y="196" text-anchor="middle" style="font-size:18px;font-weight:500;fill:#484948">Sauna</text></g>
+            <g data-cell><rect x="1566" y="8" width="148" height="148" fill="#C5D30D"></rect><text x="1582" y="52" style="font-size:30px;font-weight:700;fill:#0F0F0F">10</text><text x="1640" y="196" text-anchor="middle" style="font-size:18px;font-weight:500;fill:#484948">Esquadrias</text></g>
+          </svg>
+          <div style="display:flex;gap:44px;flex-wrap:wrap;margin-top:18px">
+            <span style="display:flex;align-items:center;gap:12px;font-size:19px;font-weight:500;color:#484948"><span style="width:22px;height:22px;background:#C5D30D;flex:none"></span>6 não conforme</span>
+            <span style="display:flex;align-items:center;gap:12px;font-size:19px;font-weight:500;color:#484948"><span style="width:22px;height:22px;flex:none;border:1px solid #0F0F0F;background:repeating-linear-gradient(146deg,#C5D30D 0 4px,#F8F8F5 4px 8px)"></span>2 guideline ambígua</span>
+            <span style="display:flex;align-items:center;gap:12px;font-size:19px;font-weight:500;color:#484948"><span style="width:22px;height:22px;background:#0F0F0F;flex:none"></span>1 conforme</span>
+            <span style="display:flex;align-items:center;gap:12px;font-size:19px;font-weight:500;color:#484948"><span style="width:22px;height:22px;flex:none;border:1.5px dashed #7C7D7F"></span>1 não verificável</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:72px;margin-top:auto;padding-top:44px;align-items:end">
+          <ul data-a style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px">
+            <li style="display:flex;gap:16px;font-size:25px;font-weight:500;line-height:1.35;color:#484948"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span><b style="font-weight:700;color:#0F0F0F">Impermeabilização do box:</b> 110 cm contra 150 exigidos</span></li>
+            <li style="display:flex;gap:16px;font-size:25px;font-weight:500;line-height:1.35;color:#484948"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span><b style="font-weight:700;color:#0F0F0F">Ralos:</b> 1 por unidade contra 2 por banheiro</span></li>
+            <li style="display:flex;gap:16px;font-size:25px;font-weight:500;line-height:1.35;color:#484948"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span><b style="font-weight:700;color:#0F0F0F">Esquadrias:</b> 1.400 de 1.402 batem. Faltam 2 portas no modelo</span></li>
+          </ul>
+          <div data-a style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #DBDBDB">
+            <div style="padding:22px 20px"><b data-count="27" style="display:block;font-size:46px;font-weight:700;letter-spacing:-.02em;line-height:1">27</b><span style="display:block;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:12px">Citações conferidas</span></div>
+            <div style="padding:22px 20px;border-left:1px solid #DBDBDB"><b style="display:block;font-size:46px;font-weight:700;letter-spacing:-.02em;line-height:1">0</b><span style="display:block;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:12px">Citação inválida</span></div>
+            <div style="padding:22px 20px;border-left:1px solid #DBDBDB"><b data-count="422" style="display:block;font-size:46px;font-weight:700;letter-spacing:-.02em;line-height:1">422</b><span style="display:block;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:12px">Divergências de nome</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #DBDBDB;padding-top:20px;margin-top:30px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F"><img src="assets/simbolo-preto.svg" alt="" style="height:22px;display:block">HypeMind v0.1 · piloto ITA-CORÁ</span>
+        <span style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F">Cowork · resultados</span>
+      </div>
+    </section>
+
+    <section data-label="Gargalos · Cowork" data-screen-label="03" data-speaker-notes="96% dos tokens foram releitura de contexto. O operador nunca sai da cadeira." style="display:flex;flex-direction:column;background:#F8F8F5;color:#0F0F0F;font-family:Ranade,'Helvetica Neue',Arial,sans-serif;padding:76px 104px 56px;overflow:hidden">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0">
+        <p data-a style="font-size:19px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7C7D7F;margin:0">03 · Gargalos · Claude Cowork</p>
+        <h2 data-a style="font-size:62px;font-weight:400;letter-spacing:-.02em;line-height:1.06;margin:18px 0 0">Caro, lento e<br>dependente do operador</h2>
+        <div data-rule style="height:3px;background:#C5D30D;width:150px;transform-origin:left center;margin:30px 0 0"></div>
+        <div style="display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center;flex:1;min-height:0;margin-top:40px">
+          <div data-a style="border:1px solid #DBDBDB;padding:40px;display:flex;flex-direction:column;align-items:center">
+            <svg viewBox="0 0 340 340" style="width:100%;max-width:400px;height:auto;display:block;font-family:Ranade,sans-serif">
+              <circle cx="170" cy="170" r="130" fill="none" stroke="#DBDBDB" stroke-width="26"></circle>
+              <circle data-arc data-frac=".96" cx="170" cy="170" r="130" fill="none" stroke="#C5D30D" stroke-width="26" transform="rotate(-90 170 170)"></circle>
+              <text x="170" y="182" text-anchor="middle" style="font-size:84px;font-weight:700;letter-spacing:-.03em;fill:#0F0F0F"><tspan data-count="96">96</tspan>%</text>
+              <text x="170" y="222" text-anchor="middle" style="font-size:19px;font-weight:700;letter-spacing:.12em;fill:#7C7D7F">RELEITURA DE CONTEXTO</text>
+            </svg>
+            <p style="font-size:20px;font-weight:500;color:#7C7D7F;margin:26px 0 0;text-align:center;line-height:1.5">369 mil tokens úteis · 75 milhões de releitura</p>
+          </div>
+          <ul data-a style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:22px">
+            <li style="display:flex;gap:18px;font-size:29px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:13px"></span><span><b style="font-weight:700">369 mil</b> tokens úteis, <b style="font-weight:700">75 milhões</b> de releitura</span></li>
+            <li style="display:flex;gap:18px;font-size:29px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:13px"></span><span>Três achados da R1 eram <b style="font-weight:700">meus</b>: faltou abrir um modelo</span></li>
+            <li style="display:flex;gap:18px;font-size:29px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:13px"></span><span>Material entregue em lotes. Foram <b style="font-weight:700">três rodadas</b> para fechar</span></li>
+            <li style="display:flex;gap:18px;font-size:29px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:13px"></span><span>Uma pergunta ficou <b style="font-weight:700">sem resposta</b>: a bancada não foi exportada</span></li>
+            <li style="display:flex;gap:18px;font-size:29px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:13px"></span><span>Não roda sozinho: <b style="font-weight:700">operador na cadeira</b> o tempo todo</span></li>
+          </ul>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #DBDBDB;padding-top:20px;margin-top:30px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F"><img src="assets/simbolo-preto.svg" alt="" style="height:22px;display:block">HypeMind v0.1 · piloto ITA-CORÁ</span>
+        <span style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F">Cowork · gargalos</span>
+      </div>
+    </section>
+
+    <section data-label="Valor · Cowork" data-screen-label="04" data-speaker-notes="Ferramenta de investigação, não de rotina. R$ 375 por obra em dez perguntas." style="display:flex;flex-direction:column;background:#F8F8F5;color:#0F0F0F;font-family:Ranade,'Helvetica Neue',Arial,sans-serif;padding:76px 104px 56px;overflow:hidden">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0">
+        <p data-a style="font-size:19px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7C7D7F;margin:0">04 · Valor de produto · Cowork no DT</p>
+        <h2 data-a style="font-size:62px;font-weight:400;letter-spacing:-.02em;line-height:1.06;margin:18px 0 0">Onde o Cowork já serve hoje</h2>
+        <div data-rule style="height:3px;background:#C5D30D;width:150px;transform-origin:left center;margin:30px 0 0"></div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;flex:1;min-height:0;align-content:center">
+          <div data-a style="padding-right:52px">
+            <h3 style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 26px;padding-bottom:16px;border-bottom:2px solid #0F0F0F">Serve bem</h3>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px">
+              <li style="display:flex;gap:16px;font-size:26px;font-weight:500;line-height:1.35"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>Investigar <b style="font-weight:700">um projeto específico</b></span></li>
+              <li style="display:flex;gap:16px;font-size:26px;font-weight:500;line-height:1.35"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>Perguntas <b style="font-weight:700">novas</b>, ainda sem escopo fixo</span></li>
+              <li style="display:flex;gap:16px;font-size:26px;font-weight:500;line-height:1.35"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>Achado que exige <b style="font-weight:700">ler desenho</b></span></li>
+              <li style="display:flex;gap:16px;font-size:26px;font-weight:500;line-height:1.35"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>Confrontar disciplinas <b style="font-weight:700">na hora</b></span></li>
+            </ul>
+          </div>
+          <div data-a style="padding:0 52px;border-left:1px solid #DBDBDB">
+            <h3 style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 26px;padding-bottom:16px;border-bottom:2px solid #0F0F0F">Quem opera</h3>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px">
+              <li style="display:flex;gap:16px;font-size:26px;font-weight:500;line-height:1.35"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>Engenheiro do DT, <b style="font-weight:700">sem programar</b></span></li>
+              <li style="display:flex;gap:16px;font-size:26px;font-weight:500;line-height:1.35"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>Conversa em português</span></li>
+              <li style="display:flex;gap:16px;font-size:26px;font-weight:500;line-height:1.35"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>Corrige o rumo no meio</span></li>
+              <li style="display:flex;gap:16px;font-size:26px;font-weight:500;line-height:1.35"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>Vê a evidência aparecer</span></li>
+            </ul>
+          </div>
+          <div data-a style="padding-left:52px;border-left:1px solid #DBDBDB">
+            <h3 style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 26px;padding-bottom:16px;border-bottom:2px solid #7C7D7F;color:#7C7D7F">Não serve para</h3>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px">
+              <li style="display:flex;gap:16px;font-size:26px;font-weight:500;line-height:1.35;color:#484948"><span style="flex:none;width:10px;height:10px;border:1.5px solid #7C7D7F;margin-top:12px"></span><span>Rodar em <b style="font-weight:700">toda obra</b>, toda revisão</span></li>
+              <li style="display:flex;gap:16px;font-size:26px;font-weight:500;line-height:1.35;color:#484948"><span style="flex:none;width:10px;height:10px;border:1.5px solid #7C7D7F;margin-top:12px"></span><span>Escopo <b style="font-weight:700">repetível</b> e auditável</span></li>
+              <li style="display:flex;gap:16px;font-size:26px;font-weight:500;line-height:1.35;color:#484948"><span style="flex:none;width:10px;height:10px;border:1.5px solid #7C7D7F;margin-top:12px"></span><span>Rodar <b style="font-weight:700">sem gente</b> acompanhando</span></li>
+              <li style="display:flex;gap:16px;font-size:26px;font-weight:500;line-height:1.35;color:#484948"><span style="flex:none;width:10px;height:10px;border:1.5px solid #7C7D7F;margin-top:12px"></span><span>Custo previsível por obra</span></li>
+            </ul>
+          </div>
+        </div>
+        <div data-a style="display:flex;gap:56px;align-items:center;margin-top:auto">
+          <p style="font-size:24px;font-weight:500;color:#484948;margin:0"><b style="font-weight:700;color:#0F0F0F">Na prática:</b> serve para investigar, não para rodar em rotina</p>
+          <p style="font-size:24px;font-weight:700;color:#0F0F0F;margin:0;background:#C5D30D;padding:12px 20px">R$ 375 por obra · 10 perguntas</p>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #DBDBDB;padding-top:20px;margin-top:30px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F"><img src="assets/simbolo-preto.svg" alt="" style="height:22px;display:block">HypeMind v0.1 · piloto ITA-CORÁ</span>
+        <span style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F">Cowork · valor</span>
+      </div>
+    </section>
+
+    <section data-label="Metodologia · Pipeline" data-screen-label="05" data-speaker-notes="A extração é a parte pesada em tempo e não fala com o modelo. Três portões nunca precisaram disparar." style="display:flex;flex-direction:column;background:#F8F8F5;color:#0F0F0F;font-family:Ranade,'Helvetica Neue',Arial,sans-serif;padding:70px 96px 52px;overflow:hidden">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end">
+          <div>
+            <p data-a style="font-size:19px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7C7D7F;margin:0">05 · Metodologia · HypeMind v0.1</p>
+            <h2 data-a style="font-size:58px;font-weight:400;letter-spacing:-.02em;line-height:1.06;margin:16px 0 0">Extração em código, decisão no modelo,<br>portões no fim</h2>
+          </div>
+          <div data-rule style="height:3px;background:#C5D30D;width:220px;transform-origin:right center;margin-bottom:16px"></div>
+        </div>
+        <div data-a style="border:1px solid #DBDBDB;padding:26px 30px;margin-top:34px">
+          <svg viewBox="0 0 1700 470" style="width:100%;height:auto;display:block;font-family:Ranade,sans-serif">
+            <defs><marker id="mk2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F0F0F"></path></marker></defs>
+            <text x="20" y="26" style="font-size:17px;font-weight:700;letter-spacing:.14em;fill:#7C7D7F">FONTES</text>
+            <text x="420" y="26" style="font-size:17px;font-weight:700;letter-spacing:.14em;fill:#7C7D7F">EXTRAÇÃO · CÓDIGO</text>
+            <text x="840" y="26" style="font-size:17px;font-weight:700;letter-spacing:.14em;fill:#7C7D7F">MODELO</text>
+            <text x="1160" y="26" style="font-size:17px;font-weight:700;letter-spacing:.14em;fill:#7C7D7F">PORTÕES</text>
+            <text x="1500" y="26" style="font-size:17px;font-weight:700;letter-spacing:.14em;fill:#7C7D7F">SAÍDA</text>
+            <rect x="20" y="60" width="260" height="74" fill="none" stroke="#0F0F0F" stroke-width="1.5"></rect>
+            <text x="38" y="92" style="font-size:21px;font-weight:500;fill:#0F0F0F">20 cadernos</text>
+            <text x="38" y="118" style="font-size:16px;font-weight:500;fill:#7C7D7F">695 chunks · 87 conflitos</text>
+            <rect x="20" y="160" width="260" height="74" fill="none" stroke="#0F0F0F" stroke-width="1.5"></rect>
+            <text x="38" y="192" style="font-size:21px;font-weight:500;fill:#0F0F0F">4 modelos IFC</text>
+            <text x="38" y="218" style="font-size:16px;font-weight:500;fill:#7C7D7F">267 MB · 43.673 elem.</text>
+            <rect x="20" y="260" width="260" height="74" fill="none" stroke="#0F0F0F" stroke-width="1.5"></rect>
+            <text x="38" y="292" style="font-size:21px;font-weight:500;fill:#0F0F0F">191 pranchas</text>
+            <text x="38" y="318" style="font-size:16px;font-weight:500;fill:#7C7D7F">ARQ + impermeabilização</text>
+            <rect x="420" y="60" width="240" height="74" fill="#DBDBDB"></rect>
+            <text x="438" y="92" style="font-size:21px;font-weight:500;fill:#0F0F0F">Índice de chunks</text>
+            <text x="438" y="118" style="font-size:16px;font-weight:500;fill:#484948">busca + conflitos</text>
+            <rect x="420" y="160" width="240" height="74" fill="#DBDBDB"></rect>
+            <text x="438" y="192" style="font-size:21px;font-weight:500;fill:#0F0F0F">ifcopenshell</text>
+            <text x="438" y="218" style="font-size:16px;font-weight:500;fill:#484948">86 s · uma vez · cache</text>
+            <rect x="420" y="260" width="240" height="74" fill="#DBDBDB"></rect>
+            <text x="438" y="292" style="font-size:21px;font-weight:500;fill:#0F0F0F">pdfplumber</text>
+            <text x="438" y="318" style="font-size:16px;font-weight:500;fill:#484948">texto vetorial</text>
+            <rect x="840" y="100" width="250" height="200" fill="#0F0F0F"></rect>
+            <text x="862" y="140" style="font-size:20px;font-weight:700;letter-spacing:.1em;fill:#C5D30D">PERGUNTA</text>
+            <text x="862" y="180" style="font-size:19px;font-weight:500;fill:#F8F8F5">contexto fechado</text>
+            <text x="862" y="208" style="font-size:19px;font-weight:500;fill:#F8F8F5">saída estruturada</text>
+            <line x1="862" y1="230" x2="1068" y2="230" stroke="#484948" stroke-width="1"></line>
+            <text x="862" y="260" style="font-size:17px;font-weight:500;fill:#7C7D7F">categoria + citação</text>
+            <text x="862" y="284" style="font-size:17px;font-weight:500;fill:#7C7D7F">+ evidência</text>
+            <rect x="1160" y="60" width="260" height="64" fill="none" stroke="#0F0F0F" stroke-width="1.5"></rect>
+            <text x="1178" y="90" style="font-size:20px;font-weight:500;fill:#0F0F0F">Validador de citação</text>
+            <text x="1178" y="112" style="font-size:16px;font-weight:500;fill:#7C7D7F">0 reprocessamentos</text>
+            <rect x="1160" y="150" width="260" height="64" fill="none" stroke="#0F0F0F" stroke-width="1.5"></rect>
+            <text x="1178" y="180" style="font-size:20px;font-weight:500;fill:#0F0F0F">Auditor adversarial</text>
+            <text x="1178" y="202" style="font-size:16px;font-weight:500;fill:#7C7D7F">disparou 1 vez</text>
+            <rect x="1160" y="240" width="260" height="64" fill="none" stroke="#0F0F0F" stroke-width="1.5"></rect>
+            <text x="1178" y="270" style="font-size:20px;font-weight:500;fill:#0F0F0F">Escopo fechado</text>
+            <text x="1178" y="292" style="font-size:16px;font-weight:500;fill:#7C7D7F">8 achados fora, isolados</text>
+            <rect x="1160" y="330" width="260" height="80" fill="none" stroke="#7C7D7F" stroke-width="1.5" stroke-dasharray="7 6"></rect>
+            <text x="1178" y="360" style="font-size:20px;font-weight:500;fill:#7C7D7F">Federação · lacuna ·</text>
+            <text x="1178" y="384" style="font-size:20px;font-weight:500;fill:#7C7D7F">guideline ambígua</text>
+            <text x="1178" y="404" style="font-size:16px;font-weight:500;fill:#7C7D7F">nunca exercitados</text>
+            <rect x="1500" y="120" width="180" height="64" fill="none" stroke="#0F0F0F" stroke-width="1.5"></rect>
+            <text x="1518" y="150" style="font-size:20px;font-weight:500;fill:#0F0F0F">achados.json</text>
+            <text x="1518" y="172" style="font-size:16px;font-weight:500;fill:#7C7D7F">4 vereditos</text>
+            <rect x="1500" y="210" width="180" height="64" fill="none" stroke="#0F0F0F" stroke-width="1.5"></rect>
+            <text x="1518" y="240" style="font-size:20px;font-weight:500;fill:#0F0F0F">mandato.json</text>
+            <text x="1518" y="262" style="font-size:16px;font-weight:500;fill:#7C7D7F">422 divergências</text>
+            <path data-p d="M280,97 L420,97" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk2)"></path>
+            <path data-p d="M280,197 L420,197" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk2)"></path>
+            <path data-p d="M280,297 L420,297" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk2)"></path>
+            <path data-p d="M660,97 L750,97 L750,150 L840,150" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk2)"></path>
+            <path data-p d="M660,197 L750,197 L750,200 L840,200" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk2)"></path>
+            <path data-p d="M660,297 L750,297 L750,250 L840,250" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk2)"></path>
+            <path data-p d="M1090,160 L1125,160 L1125,92 L1160,92" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk2)"></path>
+            <path data-p d="M1090,200 L1125,200 L1125,182 L1160,182" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk2)"></path>
+            <path data-p d="M1090,240 L1125,240 L1125,272 L1160,272" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk2)"></path>
+            <path data-p d="M1420,92 L1460,92 L1460,152 L1500,152" fill="none" stroke="#0F0F0F" stroke-width="1.5" marker-end="url(#mk2)"></path>
+            <path data-p d="M540,234 L540,440 L1590,440 L1590,274" fill="none" stroke="#7C7D7F" stroke-width="1.5" stroke-dasharray="7 6" marker-end="url(#mk2)"></path>
+            <text data-a x="292" y="88" style="font-size:16px;font-weight:500;fill:#7C7D7F">indexa</text>
+            <text data-a x="292" y="188" style="font-size:16px;font-weight:500;fill:#7C7D7F">extrai · US$ 0</text>
+            <text data-a x="292" y="288" style="font-size:16px;font-weight:500;fill:#7C7D7F">extrai · US$ 0</text>
+            <text data-a x="672" y="88" style="font-size:16px;font-weight:500;fill:#7C7D7F">exigência + conflitos</text>
+            <text data-a x="672" y="188" style="font-size:16px;font-weight:500;fill:#7C7D7F">valor medido</text>
+            <text data-a x="672" y="288" style="font-size:16px;font-weight:500;fill:#7C7D7F">valor cotado</text>
+            <text data-a x="1060" y="428" text-anchor="middle" style="font-size:17px;font-weight:500;fill:#484948">subproduto direto do IFC, sem passar pelo modelo</text>
+          </svg>
+        </div>
+        <div data-a style="display:grid;grid-template-columns:repeat(5,1fr);border:1px solid #DBDBDB;margin-top:auto">
+          <div style="padding:20px 22px"><b data-count="6037" data-format="br" style="display:block;font-size:44px;font-weight:700;letter-spacing:-.02em;line-height:1">6.037</b><span style="display:block;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:12px">Linhas de código</span></div>
+          <div style="padding:20px 22px;border-left:1px solid #DBDBDB"><b data-count="177" style="display:block;font-size:44px;font-weight:700;letter-spacing:-.02em;line-height:1">177</b><span style="display:block;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:12px">Testes sem rede</span></div>
+          <div style="padding:20px 22px;border-left:1px solid #DBDBDB"><b data-count="22" style="display:block;font-size:44px;font-weight:700;letter-spacing:-.02em;line-height:1">22</b><span style="display:block;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:12px">Commits</span></div>
+          <div style="padding:20px 22px;border-left:1px solid #DBDBDB;background:#C5D30D"><b style="display:block;font-size:44px;font-weight:700;letter-spacing:-.02em;line-height:1;color:#0F0F0F">86 s</b><span style="display:block;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0F0F0F;margin-top:12px">Extração · uma vez</span></div>
+          <div style="padding:20px 22px;border-left:1px solid #DBDBDB"><b data-count="33" style="display:block;font-size:44px;font-weight:700;letter-spacing:-.02em;line-height:1">33</b><span style="display:block;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:12px">Chamadas ao modelo</span></div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #DBDBDB;padding-top:18px;margin-top:24px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F"><img src="assets/simbolo-preto.svg" alt="" style="height:22px;display:block">HypeMind v0.1 · piloto ITA-CORÁ</span>
+        <span style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F">Pipeline · metodologia</span>
+      </div>
+    </section>
+
+    <section data-label="Resultados · Pipeline" data-screen-label="06" data-speaker-notes="Quatro perguntas, três não conformidades, tudo com citação e evidência." style="display:flex;flex-direction:column;background:#F8F8F5;color:#0F0F0F;font-family:Ranade,'Helvetica Neue',Arial,sans-serif;padding:76px 104px 56px;overflow:hidden">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0">
+        <p data-a style="font-size:19px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7C7D7F;margin:0">06 · Resultados · HypeMind v0.1 · rodada 3</p>
+        <h2 data-a style="font-size:62px;font-weight:400;letter-spacing:-.02em;line-height:1.06;margin:18px 0 0">Quatro perguntas,<br>três não conformidades</h2>
+        <div data-rule style="height:3px;background:#C5D30D;width:150px;transform-origin:left center;margin:30px 0 0"></div>
+        <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:72px;margin-top:46px;flex:1;min-height:0">
+          <div data-a>
+            <table style="width:100%;border-collapse:collapse">
+              <thead>
+                <tr>
+                  <th style="text-align:left;padding:0 14px 14px 0;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;border-bottom:2px solid #0F0F0F">Pergunta</th>
+                  <th style="text-align:left;padding:0 14px 14px;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;border-bottom:2px solid #0F0F0F">Veredito</th>
+                  <th style="text-align:right;padding:0 14px 14px;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;border-bottom:2px solid #0F0F0F">Cit.</th>
+                  <th style="text-align:right;padding:0 14px 14px;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;border-bottom:2px solid #0F0F0F">Evid.</th>
+                  <th style="text-align:left;padding:0 0 14px 14px;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;border-bottom:2px solid #0F0F0F">Força</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding:18px 14px 18px 0;font-size:24px;font-weight:500;border-bottom:1px solid #DBDBDB">Esquadrias de alumínio</td>
+                  <td style="padding:18px 14px;border-bottom:1px solid #DBDBDB"><span style="display:inline-block;padding:5px 12px;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#C5D30D;color:#0F0F0F">Não conforme</span></td>
+                  <td style="padding:18px 14px;font-size:24px;font-weight:500;text-align:right;border-bottom:1px solid #DBDBDB">5</td>
+                  <td style="padding:18px 14px;font-size:24px;font-weight:500;text-align:right;border-bottom:1px solid #DBDBDB">7</td>
+                  <td style="padding:18px 0 18px 14px;font-size:22px;font-weight:500;color:#484948;border-bottom:1px solid #DBDBDB">Alta</td>
+                </tr>
+                <tr>
+                  <td style="padding:18px 14px 18px 0;font-size:24px;font-weight:500;border-bottom:1px solid #DBDBDB">Guarda-corpos</td>
+                  <td style="padding:18px 14px;border-bottom:1px solid #DBDBDB"><span style="display:inline-block;padding:5px 12px;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#C5D30D;color:#0F0F0F">Não conforme</span></td>
+                  <td style="padding:18px 14px;font-size:24px;font-weight:500;text-align:right;border-bottom:1px solid #DBDBDB">6</td>
+                  <td style="padding:18px 14px;font-size:24px;font-weight:500;text-align:right;border-bottom:1px solid #DBDBDB">6</td>
+                  <td style="padding:18px 0 18px 14px;font-size:22px;font-weight:500;color:#484948;border-bottom:1px solid #DBDBDB">Alta</td>
+                </tr>
+                <tr>
+                  <td style="padding:18px 14px 18px 0;font-size:24px;font-weight:500;border-bottom:1px solid #DBDBDB">Dimensões das portas</td>
+                  <td style="padding:18px 14px;border-bottom:1px solid #DBDBDB"><span style="display:inline-block;padding:5px 12px;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#C5D30D;color:#0F0F0F">Não conforme</span></td>
+                  <td style="padding:18px 14px;font-size:24px;font-weight:500;text-align:right;border-bottom:1px solid #DBDBDB">8</td>
+                  <td style="padding:18px 14px;font-size:24px;font-weight:500;text-align:right;border-bottom:1px solid #DBDBDB">10</td>
+                  <td style="padding:18px 0 18px 14px;font-size:22px;font-weight:500;color:#484948;border-bottom:1px solid #DBDBDB">Mista</td>
+                </tr>
+                <tr>
+                  <td style="padding:18px 14px 18px 0;font-size:24px;font-weight:500">Impermeabilização</td>
+                  <td style="padding:18px 14px"><span style="display:inline-block;padding:5px 12px;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid #7C7D7F;color:#484948">Não verificável</span></td>
+                  <td style="padding:18px 14px;font-size:24px;font-weight:500;text-align:right">5</td>
+                  <td style="padding:18px 14px;font-size:24px;font-weight:500;text-align:right">4</td>
+                  <td style="padding:18px 0 18px 14px;font-size:22px;font-weight:500;color:#484948">n/d</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="font-size:24px;font-weight:500;color:#484948;margin:36px 0 0;border-top:1px solid #DBDBDB;padding-top:22px"><b style="font-weight:700;color:#0F0F0F">100%</b> dos vereditos com citação e evidência</p>
+          </div>
+          <div>
+            <div data-a>
+              <h3 style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 24px;padding-bottom:14px;border-bottom:2px solid #0F0F0F">A evidência mais limpa</h3>
+              <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px">
+                <li style="display:flex;gap:16px;font-size:25px;font-weight:500;line-height:1.35"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span><b style="font-weight:700">JAC140</b> tem 140 × 186 cm no sistema Hydro Produtiva 25</span></li>
+                <li style="display:flex;gap:16px;font-size:25px;font-weight:500;line-height:1.35"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>O caderno 4.003 limita esse sistema a <b style="font-weight:700">1200 mm</b></span></li>
+                <li style="display:flex;gap:16px;font-size:25px;font-weight:500;line-height:1.35"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>O projeto escolheu o sistema e <b style="font-weight:700">excedeu o limite dele</b></span></li>
+                <li style="display:flex;gap:16px;font-size:25px;font-weight:500;line-height:1.35"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span><b style="font-weight:700">JAC255 e JAC378</b> foram declaradas <b style="font-weight:700">dentro</b> do limite</span></li>
+              </ul>
+            </div>
+            <div data-a style="margin-top:auto;padding-top:46px">
+              <h3 style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 20px;padding-bottom:14px;border-bottom:2px solid #0F0F0F">Subprodutos, sem custo de veredito</h3>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #DBDBDB">
+                <div style="padding:20px"><b data-count="422" style="display:block;font-size:42px;font-weight:700;letter-spacing:-.02em;line-height:1">422</b><span style="display:block;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:12px">Nome × quantities</span></div>
+                <div style="padding:20px;border-left:1px solid #DBDBDB"><b data-count="8" style="display:block;font-size:42px;font-weight:700;letter-spacing:-.02em;line-height:1">8</b><span style="display:block;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:12px">Achados fora de escopo</span></div>
+                <div style="padding:20px;border-left:1px solid #DBDBDB"><b data-count="3" style="display:block;font-size:42px;font-weight:700;letter-spacing:-.02em;line-height:1">3</b><span style="display:block;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;margin-top:12px">NC em potencial</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #DBDBDB;padding-top:20px;margin-top:30px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F"><img src="assets/simbolo-preto.svg" alt="" style="height:22px;display:block">HypeMind v0.1 · piloto ITA-CORÁ</span>
+        <span style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F">Pipeline · resultados</span>
+      </div>
+    </section>
+
+    <section data-label="Gargalos · Pipeline" data-screen-label="07" data-speaker-notes="Sem gabarito, sem acurácia. Rastreável não é verificado." style="display:flex;flex-direction:column;background:#F8F8F5;color:#0F0F0F;font-family:Ranade,'Helvetica Neue',Arial,sans-serif;padding:76px 104px 56px;overflow:hidden">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0">
+        <p data-a style="font-size:19px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7C7D7F;margin:0">07 · Gargalos · HypeMind v0.1</p>
+        <h2 data-a style="font-size:62px;font-weight:400;letter-spacing:-.02em;line-height:1.06;margin:18px 0 0">Rastreável não é <span style="font-family:Sentient,Georgia,serif;font-style:italic;background:#C5D30D;color:#0F0F0F;padding:0 12px">verificado</span></h2>
+        <div data-rule style="height:3px;background:#C5D30D;width:150px;transform-origin:left center;margin:30px 0 0"></div>
+        <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:72px;margin-top:46px;flex:1;min-height:0;align-items:start">
+          <div data-a>
+            <table style="width:100%;border-collapse:collapse">
+              <thead>
+                <tr>
+                  <th style="text-align:left;padding:0 14px 14px 0;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;border-bottom:2px solid #0F0F0F">Portão de comportamento</th>
+                  <th style="text-align:right;padding:0 0 14px 14px;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;border-bottom:2px solid #0F0F0F">Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style="padding:17px 14px 17px 0;font-size:24px;font-weight:500;border-bottom:1px solid #DBDBDB">Validador de citação</td><td style="padding:17px 0 17px 14px;text-align:right;border-bottom:1px solid #DBDBDB"><span style="display:inline-block;padding:5px 12px;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#0F0F0F;color:#F8F8F5">Exercitado</span></td></tr>
+                <tr><td style="padding:17px 14px 17px 0;font-size:24px;font-weight:500;border-bottom:1px solid #DBDBDB">Escopo fechado</td><td style="padding:17px 0 17px 14px;text-align:right;border-bottom:1px solid #DBDBDB"><span style="display:inline-block;padding:5px 12px;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#0F0F0F;color:#F8F8F5">Exercitado</span></td></tr>
+                <tr><td style="padding:17px 14px 17px 0;font-size:24px;font-weight:500;border-bottom:1px solid #DBDBDB">Auditor adversarial</td><td style="padding:17px 0 17px 14px;text-align:right;border-bottom:1px solid #DBDBDB"><span style="display:inline-block;padding:5px 12px;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#C5D30D;color:#0F0F0F">Parcial · 1 disparo</span></td></tr>
+                <tr><td style="padding:17px 14px 17px 0;font-size:24px;font-weight:500;color:#484948;border-bottom:1px solid #DBDBDB">Regra da federação</td><td style="padding:17px 0 17px 14px;text-align:right;border-bottom:1px solid #DBDBDB"><span style="display:inline-block;padding:5px 12px;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid #7C7D7F;color:#7C7D7F">Não exercitado</span></td></tr>
+                <tr><td style="padding:17px 14px 17px 0;font-size:24px;font-weight:500;color:#484948;border-bottom:1px solid #DBDBDB">Detector de lacuna de export</td><td style="padding:17px 0 17px 14px;text-align:right;border-bottom:1px solid #DBDBDB"><span style="display:inline-block;padding:5px 12px;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid #7C7D7F;color:#7C7D7F">Não exercitado</span></td></tr>
+                <tr><td style="padding:17px 14px 17px 0;font-size:24px;font-weight:500;color:#484948">Guideline ambígua</td><td style="padding:17px 0 17px 14px;text-align:right"><span style="display:inline-block;padding:5px 12px;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid #7C7D7F;color:#7C7D7F">Não exercitado</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul data-a style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px">
+            <li style="display:flex;gap:18px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:12px"></span><span><b style="font-weight:700">Sem gabarito, sem acurácia.</b> Nenhum veredito validado por engenheiro</span></li>
+            <li style="display:flex;gap:18px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:12px"></span><span>Nenhuma das 3 não conformidades passou pelo <b style="font-weight:700">auditor</b></span></li>
+            <li style="display:flex;gap:18px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:12px"></span><span>“Zero falso conforme” é <b style="font-weight:700">verdadeiro e vazio</b>: nunca emitiu um conforme</span></li>
+            <li style="display:flex;gap:18px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:12px"></span><span>O recorte visual <b style="font-weight:700">recorta desenho</b> em vez de legenda. Foi o que travou a impermeabilização</span></li>
+            <li style="display:flex;gap:18px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:12px;height:12px;background:#C5D30D;margin-top:12px"></span><span>Uma rodada <b style="font-weight:700">caiu por PDF malformado</b> depois de 8 chamadas pagas. Já corrigido</span></li>
+          </ul>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #DBDBDB;padding-top:20px;margin-top:30px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F"><img src="assets/simbolo-preto.svg" alt="" style="height:22px;display:block">HypeMind v0.1 · piloto ITA-CORÁ</span>
+        <span style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F">Pipeline · gargalos</span>
+      </div>
+    </section>
+
+    <section data-label="Comparação" data-screen-label="08" data-speaker-notes="Mesmo acervo, mesmo modelo. Doze vezes mais barato por pergunta, com escopos diferentes." style="display:flex;flex-direction:column;background:#0F0F0F;color:#F8F8F5;font-family:Ranade,'Helvetica Neue',Arial,sans-serif;padding:76px 104px 56px;overflow:hidden">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0">
+        <p data-a style="font-size:19px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7C7D7F;margin:0">08 · Comparação direta · mesmo acervo, mesmo modelo</p>
+        <h2 data-a style="font-size:62px;font-weight:400;letter-spacing:-.02em;line-height:1.06;margin:18px 0 0">Cowork contra pipeline</h2>
+        <div data-rule style="height:3px;background:#C5D30D;width:150px;transform-origin:left center;margin:30px 0 0"></div>
+        <div style="display:grid;grid-template-columns:1.05fr 1fr;gap:76px;margin-top:46px;flex:1;min-height:0">
+          <div data-a style="display:flex;flex-direction:column;gap:40px">
+            <div>
+              <p style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 20px;color:#DBDBDB">Custo por pergunta</p>
+              <div style="display:flex;align-items:center;gap:18px;margin-bottom:12px"><span style="width:130px;flex:none;font-size:19px;font-weight:500;color:#7C7D7F">Cowork</span><div style="flex:1;background:#363636;height:30px"><div data-bar data-w="100%" style="height:30px;background:#7C7D7F;width:100%"></div></div><span style="width:150px;flex:none;font-size:24px;font-weight:700;text-align:right">US$ 7,28</span></div>
+              <div style="display:flex;align-items:center;gap:18px"><span style="width:130px;flex:none;font-size:19px;font-weight:500;color:#7C7D7F">Pipeline</span><div style="flex:1;background:#363636;height:30px"><div data-bar data-w="8.2%" style="height:30px;background:#C5D30D;width:8.2%"></div></div><span style="width:150px;flex:none;font-size:24px;font-weight:700;text-align:right;color:#C5D30D">US$ 0,60</span></div>
+            </div>
+            <div>
+              <p style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 20px;color:#DBDBDB">Tokens por pergunta</p>
+              <div style="display:flex;align-items:center;gap:18px;margin-bottom:12px"><span style="width:130px;flex:none;font-size:19px;font-weight:500;color:#7C7D7F">Cowork</span><div style="flex:1;background:#363636;height:30px"><div data-bar data-w="100%" style="height:30px;background:#7C7D7F;width:100%"></div></div><span style="width:150px;flex:none;font-size:24px;font-weight:700;text-align:right">7,79 M</span></div>
+              <div style="display:flex;align-items:center;gap:18px"><span style="width:130px;flex:none;font-size:19px;font-weight:500;color:#7C7D7F">Pipeline</span><div style="flex:1;background:#363636;height:30px"><div data-bar data-w="1.6%" style="height:30px;background:#C5D30D;width:1.6%"></div></div><span style="width:150px;flex:none;font-size:24px;font-weight:700;text-align:right;color:#C5D30D">123 k</span></div>
+            </div>
+            <div>
+              <p style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 20px;color:#DBDBDB">Chamadas por pergunta</p>
+              <div style="display:flex;align-items:center;gap:18px;margin-bottom:12px"><span style="width:130px;flex:none;font-size:19px;font-weight:500;color:#7C7D7F">Cowork</span><div style="flex:1;background:#363636;height:30px"><div data-bar data-w="100%" style="height:30px;background:#7C7D7F;width:100%"></div></div><span style="width:150px;flex:none;font-size:24px;font-weight:700;text-align:right">26,8</span></div>
+              <div style="display:flex;align-items:center;gap:18px"><span style="width:130px;flex:none;font-size:19px;font-weight:500;color:#7C7D7F">Pipeline</span><div style="flex:1;background:#363636;height:30px"><div data-bar data-w="31%" style="height:30px;background:#C5D30D;width:31%"></div></div><span style="width:150px;flex:none;font-size:24px;font-weight:700;text-align:right;color:#C5D30D">8,3</span></div>
+            </div>
+            <div style="background:#C5D30D;color:#0F0F0F;padding:26px 30px;margin-top:auto">
+              <p style="font-size:40px;font-weight:700;letter-spacing:-.02em;margin:0;line-height:1.1">R$ 3,09 contra R$ 37,50 por pergunta</p>
+              <p style="font-size:22px;font-weight:500;margin:10px 0 0">Doze vezes mais barato. E sem ninguém na cadeira.</p>
+            </div>
+          </div>
+          <div data-a>
+            <table style="width:100%;border-collapse:collapse">
+              <thead>
+                <tr>
+                  <th style="text-align:left;padding:0 14px 14px 0;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;border-bottom:2px solid #F8F8F5"></th>
+                  <th style="text-align:right;padding:0 14px 14px;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C7D7F;border-bottom:2px solid #F8F8F5">Cowork</th>
+                  <th style="text-align:right;padding:0 0 14px 14px;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C5D30D;border-bottom:2px solid #F8F8F5">Pipeline</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style="padding:8px 14px 8px 0;font-size:20px;font-weight:500;border-bottom:1px solid #363636">Modelo</td><td style="padding:8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">Opus 5</td><td style="padding:8px 0 8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">Opus 5</td></tr>
+                <tr><td style="padding:8px 14px 8px 0;font-size:20px;font-weight:500;border-bottom:1px solid #363636">Perguntas</td><td style="padding:8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">10</td><td style="padding:8px 0 8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">4</td></tr>
+                <tr><td style="padding:8px 14px 8px 0;font-size:20px;font-weight:500;border-bottom:1px solid #363636">Chamadas</td><td style="padding:8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">268</td><td style="padding:8px 0 8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">33</td></tr>
+                <tr><td style="padding:8px 14px 8px 0;font-size:20px;font-weight:500;border-bottom:1px solid #363636">Tokens</td><td style="padding:8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">77,9 M</td><td style="padding:8px 0 8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">1,2 M</td></tr>
+                <tr><td style="padding:8px 14px 8px 0;font-size:20px;font-weight:500;border-bottom:1px solid #363636">Custo total</td><td style="padding:8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">US$ 72,77</td><td style="padding:8px 0 8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">US$ 6,66</td></tr>
+                <tr><td style="padding:8px 14px 8px 0;font-size:20px;font-weight:500;border-bottom:1px solid #363636">Custo / pergunta</td><td style="padding:8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">US$ 7,28</td><td style="padding:8px 0 8px 14px;font-size:20px;font-weight:700;text-align:right;border-bottom:1px solid #363636;color:#C5D30D">US$ 0,60</td></tr>
+                <tr><td style="padding:8px 14px 8px 0;font-size:20px;font-weight:500;border-bottom:1px solid #363636">Em reais / pergunta</td><td style="padding:8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">R$ 37,50</td><td style="padding:8px 0 8px 14px;font-size:20px;font-weight:700;text-align:right;border-bottom:1px solid #363636;color:#C5D30D">R$ 3,09</td></tr>
+                <tr><td style="padding:8px 14px 8px 0;font-size:20px;font-weight:500;border-bottom:1px solid #363636">Operador</td><td style="padding:8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">3 horas na cadeira</td><td style="padding:8px 0 8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">nenhum</td></tr>
+                <tr><td style="padding:8px 14px 8px 0;font-size:20px;font-weight:500;border-bottom:1px solid #363636">Extração</td><td style="padding:8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">a cada rodada</td><td style="padding:8px 0 8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">86 s, uma vez</td></tr>
+                <tr><td style="padding:8px 14px 8px 0;font-size:20px;font-weight:500;border-bottom:1px solid #363636">Reexecução</td><td style="padding:8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">refaz tudo</td><td style="padding:8px 0 8px 14px;font-size:20px;font-weight:500;text-align:right;border-bottom:1px solid #363636;color:#DBDBDB">cache quente</td></tr>
+                <tr><td style="padding:8px 14px 8px 0;font-size:20px;font-weight:500">Recursos</td><td style="padding:8px 14px;font-size:20px;font-weight:500;text-align:right;color:#DBDBDB">nenhum código</td><td style="padding:8px 0 8px 14px;font-size:20px;font-weight:500;text-align:right;color:#DBDBDB">6.037 linhas</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #363636;padding-top:20px;margin-top:30px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F"><img src="assets/simbolo-branco.svg" alt="" style="height:22px;display:block">HypeMind v0.1 · piloto ITA-CORÁ</span>
+        <span style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F">Comparação</span>
+      </div>
+    </section>
+
+    <section data-label="Valor · Pipeline" data-screen-label="09" data-speaker-notes="Cowork descobre a pergunta. O pipeline a executa em escala. O Cowork investiga o achado." style="display:flex;flex-direction:column;background:#F8F8F5;color:#0F0F0F;font-family:Ranade,'Helvetica Neue',Arial,sans-serif;padding:76px 104px 56px;overflow:hidden">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0">
+        <p data-a style="font-size:19px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7C7D7F;margin:0">09 · Valor de produto · pipeline no DT</p>
+        <h2 data-a style="font-size:62px;font-weight:400;letter-spacing:-.02em;line-height:1.06;margin:18px 0 0">Não substitui o Cowork.<br><span style="font-family:Sentient,Georgia,serif;font-style:italic">Divide o trabalho com ele.</span></h2>
+        <div data-rule style="height:3px;background:#C5D30D;width:150px;transform-origin:left center;margin:30px 0 0"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;margin-top:56px;flex:1;min-height:0">
+          <div data-a style="padding-right:64px">
+            <h3 style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 28px;padding-bottom:16px;border-bottom:2px solid #0F0F0F">Pipeline · rotina</h3>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px">
+              <li style="display:flex;gap:16px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:11px;height:11px;background:#C5D30D;margin-top:12px"></span><span>Roda em <b style="font-weight:700">toda obra, toda revisão</b></span></li>
+              <li style="display:flex;gap:16px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:11px;height:11px;background:#C5D30D;margin-top:12px"></span><span>Escopo <b style="font-weight:700">versionado</b> em YAML</span></li>
+              <li style="display:flex;gap:16px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:11px;height:11px;background:#C5D30D;margin-top:12px"></span><span>Custo <b style="font-weight:700">previsível</b>: ~US$ 18 por 30 perguntas</span></li>
+              <li style="display:flex;gap:16px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:11px;height:11px;background:#C5D30D;margin-top:12px"></span><span><span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:24px">mandato.json</span> alimenta o Mandato BIM sozinho</span></li>
+              <li style="display:flex;gap:16px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:11px;height:11px;background:#C5D30D;margin-top:12px"></span><span>Roda de madrugada, sem ninguém</span></li>
+            </ul>
+          </div>
+          <div data-a style="padding-left:64px;border-left:1px solid #DBDBDB">
+            <h3 style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 28px;padding-bottom:16px;border-bottom:2px solid #0F0F0F">Cowork · investigação</h3>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px">
+              <li style="display:flex;gap:16px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:11px;height:11px;background:#C5D30D;margin-top:12px"></span><span>Pergunta <b style="font-weight:700">nova</b>, ainda sem escopo</span></li>
+              <li style="display:flex;gap:16px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:11px;height:11px;background:#C5D30D;margin-top:12px"></span><span>Achado que exige <b style="font-weight:700">ler o desenho</b></span></li>
+              <li style="display:flex;gap:16px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:11px;height:11px;background:#C5D30D;margin-top:12px"></span><span>Confronto entre disciplinas <b style="font-weight:700">na hora</b></span></li>
+              <li style="display:flex;gap:16px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:11px;height:11px;background:#C5D30D;margin-top:12px"></span><span>Engenheiro do DT opera <b style="font-weight:700">sem programar</b></span></li>
+              <li style="display:flex;gap:16px;font-size:27px;font-weight:500;line-height:1.35"><span style="flex:none;width:11px;height:11px;background:#C5D30D;margin-top:12px"></span><span>Vira <b style="font-weight:700">insumo</b> para a próxima pergunta do YAML</span></li>
+            </ul>
+          </div>
+        </div>
+        <div data-a style="background:#0F0F0F;color:#F8F8F5;padding:26px 30px;margin-top:auto;display:flex;gap:18px;align-items:baseline;flex-wrap:wrap">
+          <span style="font-size:19px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C5D30D">Fluxo proposto</span>
+          <span style="font-size:26px;font-weight:500">Cowork descobre a pergunta · pipeline a executa em escala · Cowork investiga o achado</span>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #DBDBDB;padding-top:20px;margin-top:30px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F"><img src="assets/simbolo-preto.svg" alt="" style="height:22px;display:block">HypeMind v0.1 · piloto ITA-CORÁ</span>
+        <span style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F">Pipeline · valor</span>
+      </div>
+    </section>
+
+    <section data-label="Próximos passos" data-screen-label="10" data-speaker-notes="Cinco frentes antes de escalar. O gabarito é a primeira." style="display:flex;flex-direction:column;background:#0F0F0F;color:#F8F8F5;font-family:Ranade,'Helvetica Neue',Arial,sans-serif;padding:76px 104px 56px;overflow:hidden">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0;position:relative">
+            <p data-a style="font-size:19px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7C7D7F;margin:0;position:relative">10 · Conclusões e próximos passos</p>
+        <h2 data-a style="font-size:62px;font-weight:400;letter-spacing:-.02em;line-height:1.06;margin:18px 0 0;position:relative">O que falta antes de escalar</h2>
+        <div data-rule style="height:3px;background:#C5D30D;width:150px;transform-origin:left center;margin:30px 0 0"></div>
+        <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:76px;margin-top:50px;flex:1;min-height:0;position:relative">
+          <ul data-a style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:24px">
+            <li style="display:flex;gap:20px;font-size:29px;font-weight:500;line-height:1.35"><span style="flex:none;width:34px;font-size:19px;font-weight:700;color:#C5D30D;margin-top:8px">01</span><span><b style="font-weight:700">Montar o gabarito.</b> Engenheiro define a resposta certa, fora da árvore lida</span></li>
+            <li style="display:flex;gap:20px;font-size:29px;font-weight:500;line-height:1.35"><span style="flex:none;width:34px;font-size:19px;font-weight:700;color:#C5D30D;margin-top:8px">02</span><span><b style="font-weight:700">Rodar <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:25px">hypecheck eval</span></b> em 3 rodadas: acerto, arbitragem, alucinação, citação</span></li>
+            <li style="display:flex;gap:20px;font-size:29px;font-weight:500;line-height:1.35"><span style="flex:none;width:34px;font-size:19px;font-weight:700;color:#C5D30D;margin-top:8px">03</span><span><b style="font-weight:700">Ligar a auditoria estendida</b> em toda não conformidade</span></li>
+            <li style="display:flex;gap:20px;font-size:29px;font-weight:500;line-height:1.35"><span style="flex:none;width:34px;font-size:19px;font-weight:700;color:#C5D30D;margin-top:8px">04</span><span><b style="font-weight:700">Corrigir o recorte visual</b>: hoje pega desenho, não legenda</span></li>
+            <li style="display:flex;gap:20px;font-size:29px;font-weight:500;line-height:1.35"><span style="flex:none;width:34px;font-size:19px;font-weight:700;color:#C5D30D;margin-top:8px">05</span><span><b style="font-weight:700">Ampliar o escopo</b> para acionar os três portões parados</span></li>
+          </ul>
+          <div data-a>
+            <h3 style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 28px;padding-bottom:16px;border-bottom:2px solid #C5D30D">O que já está provado</h3>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px">
+              <li style="display:flex;gap:16px;font-size:25px;font-weight:500;line-height:1.35;color:#DBDBDB"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>Extração de <b style="font-weight:700;color:#F8F8F5">267 MB em 86 s</b>, custo zero</span></li>
+              <li style="display:flex;gap:16px;font-size:25px;font-weight:500;line-height:1.35;color:#DBDBDB"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span><b style="font-weight:700;color:#F8F8F5">US$ 0,60</b> por pergunta, medido</span></li>
+              <li style="display:flex;gap:16px;font-size:25px;font-weight:500;line-height:1.35;color:#DBDBDB"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>Rastreabilidade <b style="font-weight:700;color:#F8F8F5">integral</b>: 100% com citação e evidência</span></li>
+              <li style="display:flex;gap:16px;font-size:25px;font-weight:500;line-height:1.35;color:#DBDBDB"><span style="flex:none;width:10px;height:10px;background:#C5D30D;margin-top:12px"></span><span>Guarda-corpos: mesmo veredito nas <b style="font-weight:700;color:#F8F8F5">três rodadas</b></span></li>
+            </ul>
+            <div style="background:#C5D30D;color:#0F0F0F;padding:30px 32px;margin-top:56px;display:flex;align-items:baseline;justify-content:space-between;gap:24px">
+              <span style="font-size:40px;font-weight:400;letter-spacing:-.02em">build bold.</span>
+              <span style="font-size:18px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Hype Inc. · DT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #363636;padding-top:20px;margin-top:30px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F"><img src="assets/simbolo-branco.svg" alt="" style="height:22px;display:block">HypeMind v0.1 · piloto ITA-CORÁ</span>
+        <span style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F">Próximos passos</span>
+      </div>
+    </section>
+
+    <section data-label="Anexo · prompt" data-screen-label="Anexo" data-speaker-notes="O prompt que gerou o pipeline. Copiável." style="display:flex;flex-direction:column;background:#F8F8F5;color:#0F0F0F;font-family:Ranade,'Helvetica Neue',Arial,sans-serif;padding:76px 104px 56px;overflow:hidden">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end">
+          <div>
+            <p data-a style="font-size:19px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7C7D7F;margin:0">Anexo · prompt do pipeline</p>
+            <h2 data-a style="font-size:56px;font-weight:400;letter-spacing:-.02em;line-height:1.06;margin:16px 0 0">O que foi pedido ao Opus 5</h2>
+            <p data-a style="font-size:19px;font-weight:500;color:#7C7D7F;margin:14px 0 0">Role o bloco para ler o prompt completo · 235 linhas</p>
+          </div>
+          <button type="button" data-copy data-a style="font-family:Ranade,sans-serif;font-size:18px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:#C5D30D;color:#0F0F0F;border:0;border-radius:0;padding:16px 28px;cursor:pointer" class="copy-btn" data-copy-label>Copiar</button>
+        </div>
+        <div data-a style="border:1px solid #DBDBDB;margin-top:34px;flex:1;min-height:0;display:flex">
+          <pre style="margin:0;padding:32px 40px;overflow-y:auto;overflow-x:hidden;flex:1;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:19px;line-height:1.62;white-space:pre-wrap;word-break:break-word;color:#363636" data-prompt>Carregando o prompt…</pre>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #DBDBDB;padding-top:20px;margin-top:30px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F"><img src="assets/simbolo-preto.svg" alt="" style="height:22px;display:block">HypeMind v0.1 · piloto ITA-CORÁ</span>
+        <span style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7C7D7F">Anexo</span>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="deck__progress" data-progress><i></i></div>
+
+<div class="deck__bar" data-bar>
+  <button class="deck__btn" type="button" data-prev aria-label="Slide anterior">&#8592;</button>
+  <button class="deck__btn" type="button" data-next aria-label="Próximo slide">&#8594;</button>
+  <span class="deck__count" data-counter>1 / 12</span>
+  <span class="deck__label" data-slide-label></span>
+  <button class="deck__btn" type="button" data-toggle-index>Índice <small>G</small></button>
+  <button class="deck__btn" type="button" data-toggle-notes>Notas <small>N</small></button>
+  <button class="deck__btn" type="button" data-fullscreen>Tela cheia <small>F</small></button>
+</div>
+
+<aside class="deck__notes" data-notes hidden>
+  <b>Notas do apresentador</b>
+  <p data-notes-body style="margin:0"></p>
+</aside>
+
+<nav class="deck__index" data-index hidden>
+  <h2>Índice · setas para navegar · Esc para fechar</h2>
+  <ol data-index-list></ol>
+  <button class="deck__btn" type="button" data-close-index style="margin-top:32px">Fechar</button>
+</nav>
+
+<script src="deck.js"></script>
+</body>
+</html>
