@@ -4,11 +4,28 @@ Verificação automática de conformidade · Design Guidelines Hype
 Piloto **ITA-CORÁ** (Penha/SC) — sessão assistida (Cowork) e pipeline sobre o
 mesmo acervo e o mesmo modelo.
 
+## Ativar o Pages (uma vez, e só um admin do repositório consegue)
+
+O deploy está pronto, mas o Pages ainda **não foi provisionado neste
+repositório** — e o `GITHUB_TOKEN` do Actions não tem permissão para criá-lo
+(`Create Pages site failed: Resource not accessible by integration`). É um
+passo de configuração, feito uma única vez em **Settings → Pages**:
+
+- **Opção A — GitHub Actions** (usa o workflow deste repo): em *Source*,
+  escolha **GitHub Actions**. Depois rode o workflow "Deploy no GitHub Pages"
+  pela aba Actions, ou faça qualquer push — a partir daí todo push publica
+  sozinho.
+- **Opção B — direto do branch** (mais rápido, dispensa o workflow): em
+  *Source*, escolha **Deploy from a branch**, branch
+  `claude/github-pages-presentation-885y5i`, pasta `/ (root)`.
+
+Nos dois casos a URL fica em **Settings → Pages** e, na opção A, também no
+resumo do job de deploy.
+
 ## Ver online
 
-A apresentação é publicada no GitHub Pages a cada push (veja
-`.github/workflows/pages.yml`). A URL aparece na aba **Actions**, no resumo do
-job de deploy, e em **Settings → Pages**.
+Depois de ativado, a apresentação é publicada a cada push (veja
+`.github/workflows/pages.yml`).
 
 ## Rodar localmente
 
